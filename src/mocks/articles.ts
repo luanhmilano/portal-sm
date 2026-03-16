@@ -34,7 +34,7 @@ export const mockArticles: Article[] = [
       "O retiro quaresmal deste ano nos convida a mergulhar profundamente nos caminhos da conversão interior e da reconciliação.",
     content:
       "A Quaresma é tempo privilegiado de conversão. Este ano, nosso retiro quaresmal propõe um itinerário de seis semanas rumo à Páscoa, com reflexões diárias baseadas nas obras de misericórdia...",
-    imageUrl: "https://fastly.picsum.photos/id/399/800/450.jpg?hmac=KjJOHmqO3ZHPiQwFo9RfKNZyjpHJnW0XlMPjE8vXJDE",
+    imageUrl: 'https://fastly.picsum.photos/id/10/2500/1667.jpg?hmac=J04WWC_ebchx3WwzbM-Z4_KC_LeLBWr5LZMaAkWkF68',
     author: "Ir. Ana Beatriz",
     category: "Formação",
     publishedAt: "2026-02-28",
@@ -48,7 +48,7 @@ export const mockArticles: Article[] = [
       "Como viver as obras de misericórdia corporais e espirituais no dia a dia da comunidade moderna.",
     content:
       "As obras de misericórdia são mais do que simples atos de caridade — são expressões concretas do amor de Deus no mundo. Neste guia prático, apresentamos formas acessíveis de viver cada uma das 14 obras de misericórdia...",
-    imageUrl: "https://fastly.picsum.photos/id/403/800/450.jpg?hmac=M0hneTMrmKbJE1OQYN2URGHwiO6dNPGCJj6jjxaQ3Dk",
+    imageUrl: "https://fastly.picsum.photos/id/29/4000/2670.jpg?hmac=rCbRAl24FzrSzwlR5tL-Aqzyu5tX_PA95VJtnUXegGU",
     author: "Maria da Silva",
     category: "Comunidade",
     publishedAt: "2026-02-15",
@@ -62,7 +62,7 @@ export const mockArticles: Article[] = [
       "Conheça a história e as práticas da devoção à Divina Misericórdia revelada a Santa Faustina.",
     content:
       "Em 1931, Jesus apareceu a Santa Faustina Kowalska com raios de luz emanando de seu coração. Essa visão deu origem à imagem da Divina Misericórdia e a uma das devoções mais difundidas do catolicismo contemporâneo...",
-    imageUrl: "https://fastly.picsum.photos/id/355/800/450.jpg?hmac=3QhdFBzQ6DSmxMFfB0hJkJfk1r13CMIT98FHINOWQ04",
+    imageUrl: "https://fastly.picsum.photos/id/58/1280/853.jpg?hmac=YO3QnOm9TpyM5DqsJjoM4CHg8oIq4cMWLpd9ALoP908",
     author: "Pe. João Oliveira",
     category: "Espiritualidade",
     publishedAt: "2026-01-20",
@@ -76,7 +76,7 @@ export const mockArticles: Article[] = [
       "Como utilizar as plataformas digitais como ferramenta de evangelização e acolhimento.",
     content:
       "O Papa Francisco nos convida a ser presença cristã nos ambientes digitais. As redes sociais são os novos areópagos onde as sementes da fé podem ser lançadas de forma criativa e autêntica...",
-    imageUrl: "https://fastly.picsum.photos/id/454/800/450.jpg?hmac=90SMmACnisxnPsVadXCVPFiS7TJGKd7USlhRaw1X4tM",
+    imageUrl: "https://fastly.picsum.photos/id/59/2464/1632.jpg?hmac=uTfe6jCzLvCzANvJgtpo-a0fKhO8BvjpwLNYX3lqx_Q",
     author: "Lucas Mendes",
     category: "Missão",
     publishedAt: "2026-01-05",
@@ -90,7 +90,7 @@ export const mockArticles: Article[] = [
       "Um jovem encontra sentido para sua vida após conhecer o movimento Sementes da Misericórdia.",
     content:
       "Marcos tinha 25 anos quando participou pela primeira vez de um encontro do Sementes da Misericórdia. Cético e distante da fé, ele não imaginava que aquela noite mudaria completamente sua trajetória...",
-    imageUrl: "https://fastly.picsum.photos/id/501/800/450.jpg?hmac=koaFDMOASajnNUAFIKd0zfFOl7B3OOFwJsh_yFyVcPU",
+    imageUrl: "https://fastly.picsum.photos/id/88/1280/1707.jpg?hmac=NnkwPVDBTVxHkc4rALB_fyu-OHY2usdm7iRk5El7JC4",
     author: "Marcos Almeida",
     category: "Testemunhos",
     publishedAt: "2025-12-18",

@@ -3,6 +3,7 @@ import Image from "next/image";
 import { mockArticles } from "@/mocks/articles";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
+import heroBg from "@assets/foto-news.jpeg";
 
 export const metadata: Metadata = {
   title: "Notícias",
@@ -14,18 +15,31 @@ export default function NewsPage() {
   return (
     <>
       {/* Hero */}
-      <section className="bg-[var(--color-navy)] py-20">
-        <div className="mx-auto max-w-7xl px-4 text-center sm:px-6">
-          <p className="font-[family-name:var(--font-great-vibes)] text-2xl text-[var(--color-gold)]">
-            Fique por dentro
-          </p>
-          <h1 className="mt-3 text-4xl font-bold text-white sm:text-5xl">
-            Notícias &amp; Reflexões
-          </h1>
-          <p className="mx-auto mt-4 max-w-2xl text-white/70">
-            Artigos, testemunhos e reflexões para alimentar sua fé e manter-se
-            conectado ao movimento.
-          </p>
+      <section className="relative h-[360px] overflow-hidden bg-[var(--color-navy)] sm:h-[360px]">
+        <Image
+          src={heroBg}
+          alt="Noticias"
+          fill
+          priority
+          className="object-cover object-center"
+          sizes="100vw"
+        />
+
+        <div className="absolute inset-0 bg-[var(--color-navy)]/70" />
+
+        <div className="relative z-10 mx-auto flex h-full max-w-7xl items-center px-4 text-center sm:px-6">
+          <div className="w-full">
+            <p className="font-[family-name:var(--font-great-vibes)] text-2xl text-[var(--color-gold)]">
+              Fique por dentro
+            </p>
+            <h1 className="mt-3 text-4xl font-bold text-white sm:text-5xl">
+              Notícias &amp; Reflexões
+            </h1>
+            <p className="mx-auto mt-4 max-w-2xl text-white/70">
+              Artigos, testemunhos e reflexões para alimentar sua fé e manter-se
+              conectado ao movimento.
+            </p>
+          </div>
         </div>
       </section>
 

@@ -21,8 +21,8 @@ export default function RepositoryPage() {
   return (
     <>
       <div className="mb-8">
-        <h1 className="text-3xl font-bold">Repositório</h1>
-        <p className="mt-1 text-muted-foreground">
+        <h1 className="text-2xl font-bold sm:text-3xl">Repositório</h1>
+        <p className="mt-1 text-sm text-muted-foreground sm:text-base">
           Materiais de formação, cifras, áudios e vídeos para membros.
         </p>
       </div>
@@ -45,11 +45,11 @@ export default function RepositoryPage() {
                 <p className="text-sm text-muted-foreground leading-relaxed">
                   {resource.description}
                 </p>
-                <div className="mt-3 flex items-center justify-between">
+                <div className="mt-3 flex flex-wrap items-center gap-2 sm:justify-between">
                   <Badge variant="outline" className="text-xs">
                     {resource.category}
                   </Badge>
-                  <span className="text-xs text-muted-foreground">
+                  <span className="text-xs text-muted-foreground sm:ml-auto">
                     {new Date(resource.createdAt).toLocaleDateString("pt-BR")}
                   </span>
                 </div>

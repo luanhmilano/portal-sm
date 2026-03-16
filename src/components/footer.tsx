@@ -15,8 +15,8 @@ export function Footer() {
               </span>
             </div>
             <p className="text-sm text-white/70 leading-relaxed">
-              Movimento católico dedicado à evangelização e propagação da
-              Divina Misericórdia. Semear o amor, colher a graça.
+              Arquidiocese de Santa Maria de Belém do Grão Pará
+              Paróquia Basílica Santuário de N. S. de Nazaré
             </p>
           </div>
 
@@ -25,10 +25,10 @@ export function Footer() {
             <h4 className="font-semibold mb-4 text-[var(--color-gold)]">Navegação</h4>
             <ul className="space-y-2 text-sm text-white/70">
               <li><Link href="/" className="hover:text-white transition-colors">Início</Link></li>
-              <li><Link href="/about" className="hover:text-white transition-colors">Quem Somos</Link></li>
-              <li><Link href="/news" className="hover:text-white transition-colors">Notícias</Link></li>
-              <li><Link href="/events" className="hover:text-white transition-colors">Agenda</Link></li>
-              <li><Link href="/donate" className="hover:text-white transition-colors">Doe</Link></li>
+              <li><Link href="/sobre" className="hover:text-white transition-colors">Quem Somos</Link></li>
+              <li><Link href="/noticias" className="hover:text-white transition-colors">Notícias</Link></li>
+              <li><Link href="/eventos" className="hover:text-white transition-colors">Agenda</Link></li>
+              <li><Link href="/doacao" className="hover:text-white transition-colors">Doe</Link></li>
             </ul>
           </div>
 
@@ -37,8 +37,8 @@ export function Footer() {
             <h4 className="font-semibold mb-4 text-[var(--color-gold)]">Contato</h4>
             <ul className="space-y-2 text-sm text-white/70">
               <li>contato@sementesdamisericordia.org</li>
-              <li>(11) 99999-0000</li>
-              <li>São Paulo, SP — Brasil</li>
+              <li>(91) 99999-0000</li>
+              <li>Belém, PA — Brasil</li>
             </ul>
           </div>
         </div>

@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import { Card, CardContent } from "@/components/ui/card";
+import heroBg from "@assets/foto-sobre.jpeg";
 
 export const metadata: Metadata = {
   title: "Quem Somos",
@@ -11,18 +13,31 @@ export default function AboutPage() {
   return (
     <>
       {/* Hero */}
-      <section className="bg-[var(--color-navy)] py-20">
-        <div className="mx-auto max-w-7xl px-4 text-center sm:px-6">
-          <p className="font-[family-name:var(--font-great-vibes)] text-2xl text-[var(--color-gold)]">
-            Conheça nossa história
-          </p>
-          <h1 className="mt-3 text-4xl font-bold text-white sm:text-5xl">
-            Quem Somos
-          </h1>
-          <p className="mx-auto mt-4 max-w-2xl text-white/70">
-            Um movimento nascido do coração da Igreja, dedicado a levar a
-            misericórdia de Deus a todos os cantos.
-          </p>
+      <section className="relative h-[360px] overflow-hidden bg-[var(--color-navy)] sm:h-[440px]">
+        <Image
+          src={heroBg}
+          alt="Sobre"
+          fill
+          priority
+          className="object-cover object-center"
+          sizes="100vw"
+        />
+
+        <div className="absolute inset-0 bg-[var(--color-navy)]/70" />
+
+        <div className="relative z-10 mx-auto flex h-full max-w-7xl items-center px-4 text-center sm:px-6">
+          <div className="w-full">
+            <p className="font-[family-name:var(--font-great-vibes)] text-2xl text-[var(--color-gold)]">
+              Conheça nossa história
+            </p>
+            <h1 className="mt-3 text-4xl font-bold text-white sm:text-5xl">
+              Quem Somos
+            </h1>
+            <p className="mx-auto mt-4 max-w-2xl text-white/70">
+              Um movimento nascido do coração da Igreja, dedicado a levar a
+              misericórdia de Deus a todos os cantos.
+            </p>
+          </div>
         </div>
       </section>
 
@@ -32,18 +47,13 @@ export default function AboutPage() {
           <div className="prose prose-lg max-w-none">
             <h2 className="text-2xl font-bold">Nossa Missão</h2>
             <p className="mt-4 text-muted-foreground leading-relaxed">
-              O movimento Sementes da Misericórdia nasceu em 2010 com a missão de
-              evangelizar através da Divina Misericórdia. Inspirados por Santa
-              Faustina Kowalska e pelo magistério da Igreja, buscamos ser
-              instrumentos do amor misericordioso de Deus no mundo atual.
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Reiciendis consequuntur modi natus reprehenderit magni aperiam voluptatem distinctio atque perspiciatis error temporibus autem dignissimos, cum eum, minima minus dolore. Amet, impedit.
             </p>
 
             <h2 className="mt-12 text-2xl font-bold">Nosso Carisma</h2>
             <p className="mt-4 text-muted-foreground leading-relaxed">
-              Nosso carisma se fundamenta em três pilares: Oração, Formação e
-              Ação. Acreditamos que a vida cristã plena nasce do encontro pessoal
-              com Cristo Misericordioso e se manifesta no serviço generoso ao
-              próximo.
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi quaerat nostrum harum id repudiandae, laborum doloribus. Error accusamus, dolor, sequi maiores magnam suscipit sapiente provident id esse veritatis similique ad!
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Magnam praesentium libero placeat. Aspernatur inventore voluptatum iste hic, laborum dolor, ullam ut quod beatae facere illum animi cupiditate perferendis dolorum architecto!
             </p>
 
             {/* Pillars */}
@@ -78,17 +88,10 @@ export default function AboutPage() {
 
             <h2 className="mt-12 text-2xl font-bold">Nossa História</h2>
             <p className="mt-4 text-muted-foreground leading-relaxed">
-              Fundado em São Paulo por um pequeno grupo de fiéis, o Sementes da
-              Misericórdia cresceu rapidamente, irradiando-se por diversas
-              dioceses do Brasil. Hoje, contamos com comunidades ativas em mais
-              de 15 estados, levando a mensagem da Misericórdia Divina através de
-              missões, retiros, formações e ações sociais.
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. A laudantium inventore, est fuga fugit officiis dolores temporibus consequuntur, expedita doloremque reiciendis. Autem aliquid eaque, sunt odit nobis officiis saepe nulla!
             </p>
             <p className="mt-4 text-muted-foreground leading-relaxed">
-              Ao longo desses anos, milhares de pessoas foram tocadas pela graça
-              de Deus nos nossos encontros. Seguimos firmes na missão de semear o
-              amor e colher a graça, sempre sob a proteção maternal de Nossa
-              Senhora e a intercessão de Santa Faustina.
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Accusantium delectus minus nostrum, expedita dolore nam omnis itaque, neque similique quam dolorem architecto natus, odit quasi ullam cupiditate. Aut, enim ullam?
             </p>
           </div>
         </div>

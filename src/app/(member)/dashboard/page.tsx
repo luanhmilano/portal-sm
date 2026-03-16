@@ -17,10 +17,10 @@ export default function DashboardPage() {
   return (
     <>
       <div className="mb-8">
-        <h1 className="text-3xl font-bold">
+        <h1 className="text-2xl font-bold sm:text-3xl">
           Bem-vinda, {user.name.split(" ")[0]}!
         </h1>
-        <p className="mt-1 text-muted-foreground">
+        <p className="mt-1 text-sm text-muted-foreground sm:text-base">
           Acompanhe suas atividades e acesse os recursos do movimento.
         </p>
       </div>
@@ -69,10 +69,10 @@ export default function DashboardPage() {
               ].map((activity, i) => (
                 <div
                   key={i}
-                  className="flex items-center justify-between rounded-[var(--radius)] border p-3"
+                  className="flex flex-col gap-1 rounded-[var(--radius)] border p-3 sm:flex-row sm:items-center sm:justify-between"
                 >
-                  <p className="text-sm">{activity.text}</p>
-                  <span className="text-xs text-muted-foreground whitespace-nowrap ml-4">
+                  <p className="text-sm leading-relaxed">{activity.text}</p>
+                  <span className="text-xs text-muted-foreground sm:ml-4 sm:whitespace-nowrap">
                     {activity.date}
                   </span>
                 </div>

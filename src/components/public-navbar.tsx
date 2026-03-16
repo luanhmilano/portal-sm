@@ -8,10 +8,10 @@ import { Button } from "@/components/ui/button";
 
 const navLinks = [
   { href: "/", label: "Início" },
-  { href: "/about", label: "Quem Somos" },
-  { href: "/news", label: "Notícias" },
-  { href: "/events", label: "Agenda" },
-  { href: "/donate", label: "Doe", accent: true },
+  { href: "/sobre", label: "Quem Somos" },
+  { href: "/noticias", label: "Notícias" },
+  { href: "/eventos", label: "Agenda" },
+  { href: "/doacao", label: "Doe", accent: true },
 ];
 
 export function PublicNavbar() {

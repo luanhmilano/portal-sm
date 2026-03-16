@@ -16,7 +16,7 @@ export function MemberSidebar() {
   const { user } = useAuth();
 
   return (
-    <aside className="flex h-full w-64 flex-col border-r bg-white">
+    <aside className="w-full border-b bg-white md:flex md:h-full md:w-64 md:flex-col md:border-b-0 md:border-r">
       {/* Brand */}
       <div className="flex items-center gap-2 border-b px-4 py-4">
         <Heart className="h-5 w-5 text-primary" />
@@ -26,13 +26,13 @@ export function MemberSidebar() {
       </div>
 
       {/* User info */}
-      <div className="border-b px-4 py-3">
+      <div className="hidden border-b px-4 py-3 md:block">
         <p className="text-sm font-medium">{user.name}</p>
         <p className="text-xs text-muted-foreground">{user.email}</p>
       </div>
 
       {/* Nav */}
-      <nav className="flex-1 space-y-1 p-3">
+      <nav className="flex gap-2 overflow-x-auto p-3 md:flex-1 md:flex-col md:space-y-1 md:overflow-visible">
         {memberLinks.map((link) => {
           const Icon = link.icon;
           const active = pathname === link.href;
@@ -41,7 +41,7 @@ export function MemberSidebar() {
               key={link.href}
               href={link.href}
               className={cn(
-                "flex items-center gap-3 rounded-[var(--radius)] px-3 py-2 text-sm font-medium transition-colors",
+                "inline-flex shrink-0 items-center gap-2 rounded-[var(--radius)] px-3 py-2 text-sm font-medium transition-colors md:flex",
                 active
                   ? "bg-primary/10 text-primary"
                   : "text-muted-foreground hover:bg-muted hover:text-foreground"
@@ -52,10 +52,18 @@ export function MemberSidebar() {
             </Link>
           );
         })}
+
+        <Link
+          href="/"
+          className="inline-flex shrink-0 items-center gap-2 rounded-[var(--radius)] px-3 py-2 text-sm font-medium text-muted-foreground transition-colors hover:bg-muted hover:text-foreground md:hidden"
+        >
+          <Home className="h-4 w-4" />
+          Início
+        </Link>
       </nav>
 
       {/* Footer links */}
-      <div className="border-t p-3 space-y-1">
+      <div className="hidden border-t p-3 space-y-1 md:block">
         <Link
           href="/"
           className="flex items-center gap-3 rounded-[var(--radius)] px-3 py-2 text-sm text-muted-foreground transition-colors hover:bg-muted hover:text-foreground"

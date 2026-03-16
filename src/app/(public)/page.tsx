@@ -6,9 +6,10 @@ import { mockEvents } from "@/mocks/events";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { CalendarDays, ArrowRight, MapPin, Clock } from "lucide-react";
+import heroBg from "@assets/foto-home.jpeg";
 
 export const metadata: Metadata = {
-  title: "Início | Sementes da Misericórdia",
+  title: "Início",
   description:
     "Portal oficial do movimento católico Sementes da Misericórdia. Evangelização, formação, eventos e comunidade.",
   openGraph: {
@@ -25,8 +26,17 @@ export default function HomePage() {
   return (
     <>
       {/* Hero Section */}
-      <section className="relative overflow-hidden bg-[var(--color-navy)] py-24 sm:py-32">
-        <div className="absolute inset-0 bg-gradient-to-br from-[var(--color-navy)] via-[var(--color-navy)]/95 to-[var(--color-navy)]/80" />
+      <section className="relative overflow-hidden py-24 sm:py-32">
+        <Image
+          src={heroBg}
+          alt="N. S. de Nazare"
+          fill
+          priority
+          className="object-cover object-center"
+          sizes="100vw"
+        />
+        {/* Dark overlay for contrast */}
+        <div className="absolute inset-0 bg-gradient-to-br from-[var(--color-navy)]/85 via-[var(--color-navy)]/70 to-[var(--color-navy)]/55" />
         <div className="relative mx-auto max-w-7xl px-4 text-center sm:px-6">
           <p className="font-[family-name:var(--font-great-vibes)] text-3xl text-[var(--color-gold)] sm:text-4xl">
             Semear o amor
@@ -41,14 +51,14 @@ export default function HomePage() {
           </p>
           <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
             <Link
-              href="/about"
+              href="/sobre"
               className="inline-flex items-center gap-2 rounded-[var(--radius)] bg-primary px-6 py-3 text-sm font-medium text-white transition-colors hover:bg-primary/90"
             >
               Conheça o Movimento
               <ArrowRight className="h-4 w-4" />
             </Link>
             <Link
-              href="/events"
+              href="/eventos"
               className="inline-flex items-center gap-2 rounded-[var(--radius)] border border-white/30 px-6 py-3 text-sm font-medium text-white transition-colors hover:bg-white/10"
             >
               Próximos Eventos
@@ -150,7 +160,7 @@ export default function HomePage() {
                   </div>
                 </div>
                 <Link
-                  href="/events"
+                  href="/eventos"
                   className="mt-6 inline-flex w-fit items-center gap-2 rounded-[var(--radius)] bg-primary px-5 py-2.5 text-sm font-medium text-white transition-colors hover:bg-primary/90"
                 >
                   Ver Todos os Eventos
@@ -173,7 +183,7 @@ export default function HomePage() {
               <h2 className="mt-2 text-3xl font-bold">Últimas Notícias</h2>
             </div>
             <Link
-              href="/news"
+              href="/noticias"
               className="hidden items-center gap-1 text-sm font-medium text-secondary hover:underline sm:flex"
             >
               Ver todas <ArrowRight className="h-4 w-4" />
@@ -206,7 +216,7 @@ export default function HomePage() {
                 </CardContent>
                 <CardFooter>
                   <Link
-                    href={`/news`}
+                    href={`/noticias`}
                     className="text-xs font-medium text-secondary hover:underline"
                   >
                     Ler mais →
@@ -217,7 +227,7 @@ export default function HomePage() {
           </div>
           <div className="mt-8 text-center sm:hidden">
             <Link
-              href="/news"
+              href="/noticias"
               className="text-sm font-medium text-secondary hover:underline"
             >
               Ver todas as notícias →

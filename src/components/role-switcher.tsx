@@ -14,7 +14,7 @@ export function RoleSwitcher() {
 
   return (
     <div className="fixed bottom-4 right-4 z-50 flex items-center gap-2 rounded-[var(--radius)] border bg-card p-2 shadow-lg">
-      <span className="text-xs font-medium text-muted-foreground px-1">Papel:</span>
+      <span className="text-xs font-medium text-muted-foreground px-1">Nível:</span>
       {roles.map((r) => (
         <button
           key={r.value}

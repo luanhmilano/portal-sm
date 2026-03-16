@@ -35,8 +35,8 @@ export default function AdminDashboardPage() {
   return (
     <>
       <div className="mb-8">
-        <h1 className="text-3xl font-bold">Painel Administrativo</h1>
-        <p className="mt-1 text-muted-foreground">
+        <h1 className="text-2xl font-bold sm:text-3xl">Painel Administrativo</h1>
+        <p className="mt-1 text-sm text-muted-foreground sm:text-base">
           Visão geral da plataforma e métricas de conteúdo.
         </p>
       </div>
@@ -73,7 +73,7 @@ export default function AdminDashboardPage() {
               {mockArticles.slice(0, 4).map((article) => (
                 <div
                   key={article.id}
-                  className="flex items-center justify-between rounded-[var(--radius)] border p-3"
+                  className="flex flex-col gap-2 rounded-[var(--radius)] border p-3 sm:flex-row sm:items-center sm:justify-between"
                 >
                   <div className="min-w-0">
                     <p className="text-sm font-medium truncate">
@@ -103,7 +103,7 @@ export default function AdminDashboardPage() {
               {mockEvents.slice(0, 4).map((event) => (
                 <div
                   key={event.id}
-                  className="flex items-center justify-between rounded-[var(--radius)] border p-3"
+                  className="flex flex-col gap-2 rounded-[var(--radius)] border p-3 sm:flex-row sm:items-center sm:justify-between"
                 >
                   <div className="min-w-0">
                     <p className="text-sm font-medium truncate">

@@ -19,19 +19,19 @@ export default function ContentPage() {
     <>
       <div className="mb-8 flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
         <div>
-          <h1 className="text-3xl font-bold">Gestão de Conteúdo</h1>
-          <p className="mt-1 text-muted-foreground">
+          <h1 className="text-2xl font-bold sm:text-3xl">Gestão de Conteúdo</h1>
+          <p className="mt-1 text-sm text-muted-foreground sm:text-base">
             Crie, edite e gerencie artigos e eventos do portal.
           </p>
         </div>
-        <Button>
+        <Button className="w-full sm:w-auto">
           <Plus className="h-4 w-4" />
           Novo {activeTab === "articles" ? "Artigo" : "Evento"}
         </Button>
       </div>
 
       {/* Tabs */}
-      <div className="mb-6 flex gap-1 rounded-[var(--radius)] bg-muted p-1 w-fit">
+      <div className="mb-6 inline-flex max-w-full gap-1 overflow-x-auto rounded-[var(--radius)] bg-muted p-1">
         <button
           onClick={() => setActiveTab("articles")}
           className={`rounded-md px-4 py-2 text-sm font-medium transition-colors ${
@@ -59,7 +59,7 @@ export default function ContentPage() {
         <Card>
           <CardContent className="p-0">
             <div className="overflow-x-auto">
-              <table className="w-full text-sm">
+              <table className="min-w-[760px] w-full text-sm">
                 <thead className="border-b bg-muted/50">
                   <tr>
                     <th className="px-4 py-3 text-left font-medium text-muted-foreground">
@@ -126,7 +126,7 @@ export default function ContentPage() {
         <Card>
           <CardContent className="p-0">
             <div className="overflow-x-auto">
-              <table className="w-full text-sm">
+              <table className="min-w-[760px] w-full text-sm">
                 <thead className="border-b bg-muted/50">
                   <tr>
                     <th className="px-4 py-3 text-left font-medium text-muted-foreground">

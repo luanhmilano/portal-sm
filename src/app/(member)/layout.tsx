@@ -7,10 +7,10 @@ export default function MemberLayout({
   children: React.ReactNode;
 }) {
   return (
-    <div className="flex h-screen overflow-hidden">
+    <div className="flex min-h-screen flex-col md:h-screen md:flex-row md:overflow-hidden">
       <MemberSidebar />
-      <main className="flex-1 overflow-y-auto bg-[var(--color-off-white)]">
-        <div className="p-6 sm:p-8">{children}</div>
+      <main className="flex-1 bg-[var(--color-off-white)] md:overflow-y-auto">
+        <div className="p-4 sm:p-6 md:p-8">{children}</div>
       </main>
       <RoleSwitcher />
     </div>
