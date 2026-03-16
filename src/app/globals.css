@@ -1,0 +1,64 @@
+@import "tailwindcss";
+
+:root {
+  /* Color Palette */
+  --color-white: #FFFFFF;
+  --color-off-white: #F8F9FA;
+  --color-navy: #112557;
+  --color-red: #A90004;
+  --color-light-blue: #00CBFD;
+  --color-gold: #F7CD5F;
+
+  /* Semantic Colors */
+  --background: #FFFFFF;
+  --foreground: #112557;
+  --muted: #F8F9FA;
+  --muted-foreground: #64748b;
+  --card: #FFFFFF;
+  --card-foreground: #112557;
+  --primary: #A90004;
+  --primary-foreground: #FFFFFF;
+  --secondary: #00CBFD;
+  --secondary-foreground: #112557;
+  --accent: #F7CD5F;
+  --accent-foreground: #112557;
+  --border: #e2e8f0;
+  --ring: #A90004;
+  --radius: 8px;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-border: var(--border);
+  --color-ring: var(--ring);
+  --radius: 8px;
+
+  --font-sans: var(--font-inter);
+  --font-serif: var(--font-playfair);
+  --font-cursive: var(--font-great-vibes);
+}
+
+* {
+  border-color: var(--border);
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-inter), system-ui, sans-serif;
+}
+
+h1, h2, h3 {
+  font-family: var(--font-playfair), Georgia, serif;
+}

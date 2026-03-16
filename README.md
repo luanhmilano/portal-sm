@@ -1,36 +1,97 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Portal Sementes da Misericórdia
 
-## Getting Started
+Portal web do movimento católico **Sementes da Misericórdia** — evangelização, formação e comunidade.
 
-First, run the development server:
+## Stack
+
+| Tecnologia | Versão |
+|------------|--------|
+| Next.js (App Router) | 16 |
+| React | 19 |
+| Tailwind CSS | 4 |
+| TypeScript | 5 |
+| Lucide React | Icons |
+| CVA + clsx + tailwind-merge | UI primitives |
+
+## Início Rápido
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+npm install
+npm run dev       # http://localhost:3000
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Scripts
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```bash
+npm run dev       # Servidor de desenvolvimento (Turbopack)
+npm run build     # Build de produção
+npm run lint      # Lint com ESLint
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Arquitetura
 
-## Learn More
+O projeto utiliza **Route Groups** do App Router para separar áreas sem afetar URLs:
 
-To learn more about Next.js, take a look at the following resources:
+```
+src/
+├── app/
+│   ├── (public)/          # Páginas públicas (SEO)
+│   │   ├── page.tsx       # / — Home
+│   │   ├── about/         # /about — Quem Somos
+│   │   ├── news/          # /news — Notícias
+│   │   ├── events/        # /events — Agenda
+│   │   └── donate/        # /donate — Doações
+│   ├── (member)/          # Área do membro
+│   │   ├── dashboard/     # /dashboard
+│   │   └── repository/    # /repository — Materiais
+│   └── (admin)/           # Painel administrativo
+│       └── admin/
+│           ├── page.tsx   # /admin — Dashboard
+│           └── content/   # /admin/content — Gestão de conteúdo
+├── components/
+│   ├── ui/                # Primitivos: Button, Card, Badge (CVA + forwardRef)
+│   ├── public-navbar.tsx
+│   ├── footer.tsx
+│   ├── member-sidebar.tsx
+│   ├── admin-sidebar.tsx
+│   └── role-switcher.tsx  # Widget para trocar papel (guest/member/admin)
+├── contexts/
+│   └── auth-context.tsx   # AuthProvider com roles mockadas
+├── lib/
+│   ├── fonts.ts           # Inter, Playfair Display, Great Vibes
+│   └── utils.ts           # cn() — clsx + tailwind-merge
+└── mocks/                 # Dados mockados com interfaces TypeScript
+    ├── articles.ts
+    ├── events.ts
+    ├── resources.ts
+    └── users.ts
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Design System
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+| Token | Cor | Uso |
+|-------|-----|-----|
+| `--foreground` | `#112557` (Navy) | Texto, footer, sidebar admin |
+| `--primary` | `#A90004` (Vermelho) | CTAs, botões de ação |
+| `--secondary` | `#00CBFD` (Azul claro) | Links, ações secundárias |
+| `--accent` | `#F7CD5F` (Dourado) | Destaques litúrgicos |
+| `--muted` | `#F8F9FA` (Off-white) | Fundo de seções |
 
-## Deploy on Vercel
+**Tipografia:** Inter (corpo), Playfair Display (títulos), Great Vibes (acentos decorativos).
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Autenticação Mockada
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Sem backend. Um `RoleSwitcher` no canto inferior direito alterna entre:
+
+- **Visitante** — acesso apenas às páginas públicas
+- **Membro** — dashboard e repositório de materiais
+- **Admin** — painel com gestão de conteúdo (CRUD mockado)
+
+## Decisões Técnicas
+
+- **RSC por padrão** — `'use client'` apenas em componentes interativos (folhas da árvore).
+- **SEO** — Páginas públicas exportam objetos `metadata`. Root layout usa `title.template`.
+- **Imagens** — `next/image` com `sizes` em todas as imagens. Domínio `fastly.picsum.photos` configurado.
+- **Tailwind v4** — Tema via `@theme inline` em `globals.css`, sem `tailwind.config.js`.
+- **Shadcn-style** — Componentes UI manuais em `src/components/ui/`, sem `npx shadcn`.
+- **Loading/Error** — `loading.tsx` e `error.tsx` em cada route group.
